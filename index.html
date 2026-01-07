@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafiz Tayyab Nustafa - Computer Vision Researcher</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222;
+            --secondary-text: #555;
+            --link-color: #0056b3; /* Academic Blue */
+            --accent-color: #2c3e50;
+            --border-color: #e0e0e0;
+            --font-main: 'Georgia', serif;
+            --font-head: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            margin: 0 0 5px 0;
+            color: var(--accent-color);
+        }
+
+        .header-links {
+            font-family: var(--font-head);
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        .header-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .header-links a:hover {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+
+        /* --- NAVIGATION --- */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            font-family: var(--font-head);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--link-color);
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: var(--font-head);
+            font-size: 1.6rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--accent-color);
+        }
+
+        h3 {
+            font-family: var(--font-head);
+            font-size: 1.15rem;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        /* --- EDUCATION --- */
+        .edu-item {
+            margin-bottom: 25px;
+        }
+        
+        .uni-name {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .uni-name:hover {
+            text-decoration: underline;
+        }
+
+        .thesis-link {
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .thesis-link a {
+            color: var(--link-color);
+        }
+
+        /* --- PUBLICATIONS --- */
+        .pub-item {
+            margin-bottom: 25px;
+        }
+
+        /* This class makes the name bold */
+        .author-bold {
+            font-weight: bold; 
+        }
+
+        .pub-title {
+            font-weight: bold;
+            display: block; /* Forces title to new line if needed, or block styling */
+            margin-bottom: 4px;
+        }
+
+        .pub-meta {
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+            margin-bottom: 4px;
+        }
+
+        .pub-doi {
+            font-size: 0.85rem;
+            font-family: var(--font-head);
+        }
+
+        .pub-doi a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        /* --- EXPERIENCE --- */
+        .job-item {
+            margin-bottom: 30px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+
+        .job-role {
+            font-weight: bold;
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+        }
+
+        .job-date {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            font-family: var(--font-head);
+        }
+
+        .job-list {
+            padding-left: 20px;
+            margin-top: 10px;
+            color: #444;
+        }
+
+        /* --- PROJECTS --- */
+        .project-item {
+            margin-bottom: 15px;
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+        }
+
+        /* --- SKILLS & INTERESTS --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-category strong {
+            display: block;
+            font-family: var(--font-head);
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Hafiz Tayyab Mustafa</h1>
+        <div style="margin-bottom: 10px; color: #555;">Ph.D. in Control Science and Engineering</div>
+        
+        <div class="header-links">
+            <a href="mailto:mustafa.tayyab@hotmail.com">Email</a> |
+            <a href="https://linkedin.com/in/h-tayyab-mustafa-a4120361" target="_blank">LinkedIn</a> |
+            <a href="https://scholar.google.com//citations?user=3xJiTWwAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a> |
+            <a href="https://orcid.org/my-orcid?orcid=0000-0003-3992-4457" target="_blank">ORCID</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+        </ul>
+    </nav>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            
+            I am a dedicated researcher, with demonstrated research expertise in image processing and computer vision. 
+            Highly organized, collaborative team-scientist with project management skills to keep projects on time to completion. 
+            Skilled in translating complex scientific concepts into easily understood terms. Collaborative team player with excellent organizational skills. 
+            Actively seek interdisciplinary collaborations and stay updated with the latest advancements in the field.
+        </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div class="edu-item">
+            <h3>Ph.D. in Control Science and Engineering</h3>
+            <!-- University Link -->
+            <a href="https://www.sjtu.edu.cn" class="uni-name" target="_blank">Shanghai Jiao Tong University</a>
+            <div style="font-size: 0.9rem; color: #666;">2017 - 2022</div>
+            <!-- Thesis Link -->
+            <div class="thesis-link">
+                Dissertation: <a href="#">"Development of deep learning-based image fusion techniques"</a>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <h3>M.S. in Data Science</h3>
+            <a href="https://www.xjtu.edu.cn" class="uni-name" target="_blank">Xi'an Jiaotong University</a>
+            <div style="font-size: 0.9rem; color: #666;">2015 - 2017</div>
+            <div class="thesis-link">
+                Thesis: <a href="#">"Automatic Licence Number Plate Recognition System"</a>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <h3>B.S. in Computer Science</h3>
+            <a href="https://www.uet.edu.pk" class="uni-name" target="_blank">University of Engineering & Technology, Lahore</a>
+            <div style="font-size: 0.9rem; color: #666;">2009 - 2013</div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2>Publications</h2>
+        
+        <!-- Publication 1 -->
+        <div class="pub-item">
+            <span class="pub-title">CAFusion: A Progressive ConvMixer Network for Context-Aware Infrared and Visible Image Fusion.</span>
+            <div class="pub-meta">
+                <!-- Use .author-bold to bold your name anywhere it appears -->
+                <span class="author-bold">Mustafa HT</span>, Mustafa H, Alhuzali H, Asad, M, Zheng Z.
+                <em>PLOS ONE (Accepted)</em>, 2025.
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1000/xyz123" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="pub-item">
+            <span class="pub-title"> AI in Mental Health: From Digital Companions to Clinical Decision-Making and Training for Tomorrow</span>
+            <div class="pub-meta">
+                Batool A, <span class="author-bold">Mustafa HT</span>, Rehman N, Mustafa H, and Mehmood A.
+                <em>IGI Global Scientific Publishing</em>, 2026.
+            </div>
+            <div class="pub-doi">
+                <a href="{https://doi.org/10.4018/979-8-3373-4217-7.ch004" target="_blank">Link</a>
+            </div>
+        </div>
+
+
+        <!-- Publication 3 -->
+        <div class="pub-item">
+            <span class="pub-title">ConvFuse: A Progressive Convformer Network for Context-Aware Multisensor Image Fusion.</span>
+            <div class="pub-meta">
+                <!-- Use .author-bold to bold your name anywhere it appears -->
+                <span class="author-bold">Mustafa HT</span>, Mustafa H, Lee IH and Zheng Z.
+                <em>2025 IEEE International Conference on Image Processing (ICIP), 1654-1659</em>, 2025.
+            </div>
+            <div class="pub-doi">
+                <a href="https://ieeexplore.ieee.org/document/11084429" target="_blank">Link</a>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Publication 4 -->
+        <div class="pub-item">
+            <span class="pub-title"> Inter-Modality Feature Prediction through Multimodal Fusion for 3D Shape Defect Detection</span>
+            <div class="pub-meta">
+                Asad, M., Azeem, W., <span class="author-bold">Mustafa HT</span>, Fang Y, Zuo Y, Yang, J. and Liu, W.
+                <em> Neural Networks</em>, 2026.
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1016/j.neunet.2025.108057" target="_blank">Link</a>
+            </div>
+        </div>
+
+
+
+        <!-- Publication 5 -->
+        <div class="pub-item">
+            <span class="pub-title">2M3DF: Advancing 3D Industrial Defect Detection with Multi Perspective Multimodal Fusion Network.</span>
+            <div class="pub-meta">
+                Asad, M., Azeem, W., Jiang, H., <span class="author-bold">Mustafa HT</span>, Yang, J. and Liu, W.
+                <em>IEEE Transactions on Circuits and Systems for Video Technology</em>, 2025.
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1109/TCSVT.2025.3536475" target="_blank">Link</a>
+            </div>
+        </div>
+
+        
+        <!-- Publication 6 -->
+        <div class="pub-item">
+            <span class="pub-title">TGF: Multiscale transformer graph attention network for multi-sensor image fusion</span>
+            <div class="pub-meta">
+                <span class="author-bold">Mustafa HT</span>, Shamsolmoali P, Lee IH.
+                <em>Expert Systems with Applications</em>, 2024.
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1016/j.eswa.2023.121789" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <!-- Publication 7 -->
+        <div class="pub-item">
+            <span class="pub-title">Infrared and visible image fusion based on dilated residual attention network.</span><div class="pub-meta">
+                <span class="author-bold">Mustafa HT</span>, Yang J, Mustafa H, Zareapoor M.
+                <em>Optik</em>, 2020.
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1016/j.ijleo.2020.165409" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <!-- Publication 8 -->
+        <div class="pub-item">
+            <span class="pub-title">MLDNet: Multi-level dense network for multi-focus image fusion</span>
+            <div class="pub-meta">
+                <span class="author-bold">Mustafa HT</span>,  Zareapoor M, Yang J.
+                <em>Signal Processing</em>, 2020.  
+            </div>
+            <div class="pub-doi">
+                <a href="https://doi.org/10.1016/j.image.2020.115864" target="_blank">Link</a>   
+            </div>
+        </div>
+
+        <!-- Publication 9 -->
+        <div class="pub-item">
+            <span class="pub-title"> Multi-scale convolutional neural network for multi-focus image fusion</span>
+            <div class="pub-meta">
+                <span class="author-bold">Mustafa HT</span>, Yang J, Zareapoor M 
+                <em>Image and Vision Computing</em>, 2019.
+            </div>
+            <div class="pub-doi">   
+                <a href="https://doi.org/10.1016/j.imavis.2019.03.001" target="_blank">Link</a>
+            </div>
+        </div>
+
+        <!-- Publication 10 -->
+        <div class="pub-item">
+            <span class="pub-title">Dense multi-focus fusion net: A deep unsupervised convolutional network for multi-focus image fusion</span>
+            <div class="pub-meta">
+                <span class="author-bold">Mustafa HT</span>, Liu F, Yang J, Khan Z, Huang Q.
+                <em>International Conference on Artificial Intelligence and Soft Computing 2019</em>, 2019.
+            </div>
+            <div class="pub-doi">   
+                <a href="https://doi.org/10.1007/978-3-030-20912-4_15" target="_blank">Link</a>
+            </div>
+        </div>  
+
+
+
+    </section>
+
+
+
+    <!-- Work Experience -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+
+        <!-- Exp 1 -->
+        <div class="job-item">
+            <div class="job-header">
+                <span class="job-role">Postdoctoral Researcher</span>
+                <span class="job-date">July 2024 - Present</span>
+            </div>
+            <div><a href="https://www.zjnu.edu.cn" class="uni-name">Zhejiang Normal University</a></div>
+            <ul class="job-list">
+                <li>Working on multimodal image fusion for intelligent transportation using self-supervised learning techniques.</li>
+                <li>Collaboration with international research groups on advanced deep learning applications.</li>
+                <li>Collaborated with industry partners to apply research in real-world scenarios.</li>
+            </ul>
+        </div>
+
+        
+
+        <!-- Exp 2 -->
+        <div class="job-item">
+            <div class="job-header">
+                <span class="job-role">Postdoctoral Researcher</span>
+                <span class="job-date">July 2022- Feb 2024</span>
+            </div>
+            <div><a href="https://www.tukorea.ac.kr" class="uni-name">Tech university of Korea</a></div>
+            <ul class="job-list">
+                <li>Conducted progressive research and developed deep learning-based frameworks for multimodal image fusion and registration, remote sensing and object detection.</li>
+                <li>Taught undergraduate students in image processing and mentored graduate students in deep learning.</li>
+            </ul>
+        </div>
+
+
+        <!-- Exp 3 -->
+        <div class="job-item">
+            <div class="job-header">
+                <span class="job-role">Graduate Research Assistant</span>
+                <span class="job-date">2018 - 2023</span>
+            </div>
+            <div><a href="https://www.university.edu" class="uni-name">University of Excellence</a></div>
+            <ul class="job-list">
+                <li></li>
+                <li>Developed advance deep learning based models for image fusion applications.</li>
+                <li>Collaboration with international research groups on advanced deep learning applications.</li>
+            </ul>
+        </div>
+
+
+        <!-- Exp 4 -->
+        <div class="job-item">
+            <div class="job-header">
+                <span class="job-role">Teaching Assistant</span>
+                <span class="job-date">2019 - 2021</span>
+            </div>
+            <div><a href="https://www.university.edu" class="uni-name">University of Excellence</a></div>
+            <ul class="job-list">
+                <li>Taught lab sessions for "Data Structures 101".</li>
+                <li>Graded assignments and provided feedback to over 100 students per semester.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Research Projects -->
+    <section id="projects">
+        <h2>Research Projects</h2>
+
+        <div class="project-item">
+            <h3>Industrial Defect Detection</h3>
+            <p>
+                Developed an AI-driven defect detection system for industrial applications, leveraging deep learning techniques 
+                to identify and classify defects in manufacturing processes with high accuracy.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <h3>Image Fusion for Intelligent Transportation</h3>
+            <p>
+                Designed and implemented a multisensor image fusion framework for enhanced perception in intelligent transportation systems, 
+                integrating fusion, detection, and segmentation techniques to improve object recognition and scene understanding.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <h3>Multimodal stress classification</h3>
+            <p>
+                Investigating and developing deep learning-based multimodal techniques combining textual data, facial expressions, 
+                and voice data for accurate and early stress detection. Implemented advanced neural network architectures to 
+                improve classification performance and robustness.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <h3>UAV Sensor‑Failure Classification and Diagnostics</h3>
+            <p>
+                Designed fault‑classification models using multi‑sensor signals to detect and categorize sensor anomalies during UAV operations. Evaluated performance on simulated and real flight data to support future health‑monitoring and fault‑tolerant control strategies.
+            </p>
+        </div>
+
+        "Addressed performance degradation of fixed‑parameter controllers under changing load, voltage, and operating conditions by exploring machine‑learning‑based self‑tuning strategies. 
+        Used real‑time signal features to recommend controller parameters, 
+        aiming to maintain output stability and power quality across operating ranges."
+
+        <div class="project-item">
+            <h3>Adaptive Power‑Electronics Control with Machine Learning</h3>
+            <p>
+                This project involved the development of a machine learning-based 
+                adaptive power-electronics controller for real-time control of power systems under
+                changing load, voltage, and operating conditions. The project aim to maintain 
+                output stability and power quality across operating ranges. This project is currently ongoing and at initial stages.
+            </p>        
+        </div>
+
+    </section>
+
+    <!-- Skills & Special Training -->
+    <section id="skills">
+        <h2>Skills & Training</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-category">
+                <strong>Programming Languages</strong>
+                Python, MATLAB, SQL
+            </div>
+
+            <div class="skill-category">
+                <strong>Tools & Frameworks</strong>
+                TensorFlow, PyTorch, Docker, Git, YOLO
+            </div>
+
+            <div class="skill-category">
+                <strong>Special Training Courses</strong>
+                <ul>
+                    <li>Climate Change AI Virtual Summer School (2024)</li>
+                    <li>Theoretical and Practical Applications of the Internet of Things (2016)</li>
+                    <li>Theory and Innovative Applications of Big Data (2016)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <strong>Languages</strong>
+                English (Proficient), Chinese (Mandarin, Elementary), Urdu (Native)
+
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="interests">
+        <h2>Research Interests</h2>
+        <p>
+            Medical Imaging, Climate Change AI, Machine Learning, 
+            Computer Vision, Natural Language Processing, Generative AI.
+        </p>
+    </section>
+
+</body>
+</html>
